@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Todo List</h1>
+        <div class="task-creation">
+            <input id="task-creation-input" class="control-value-size" type="text" placeholder="Créer une nouvelle tâche...">
+            <span class="add-task-btn"></span>
+        </div>
+    </header>
+    <main>
+        <ul id="tasks" role="list">
+            <!--<li data-id="0">
+               <span class="checkbox" data-id="0"></span>
+               <input type="text" value="Hello World!" data-id="0" disabled>
+            </li>
+            <li data-id="1">
+                <span class="checkbox checked" data-id="1"></span>
+                <input type="text" value="Hello World!" data-id="1" disabled>
+             </li>-->
+        </ul>
+    </main>
+    <footer>
+        <p>Par <a href="https://www.linkedin.com/in/maxime-verdonck/" target="_blank">Maxime</a> !</p>
+    </footer>
+    <script src="scripts/task.js"></script>
+    <script src="scripts/listeners.js" defer></script>
+</body>
+</html>
