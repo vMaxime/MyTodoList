@@ -43,6 +43,7 @@ class Task {
         spanElement.classList.add('checkbox');
         if (this.state === Task.STATE.DONE)
             spanElement.classList.add('checked');
+        listenCheckbox(spanElement);
 
         let inputElement = document.createElement('input');
         inputElement.setAttribute('type', 'text');

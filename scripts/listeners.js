@@ -1,12 +1,5 @@
-for (let checkboxElement of document.querySelectorAll(".checkbox")) {
-    checkboxElement.addEventListener('click', () => {
-        for (let task of tasks)
-            if (task.getId() == checkboxElement.getAttribute('data-id')) {
-                task.toggleState();
-                task.updateElement();
-            }
-    });
-}
+for (let checkboxElement of document.querySelectorAll(".checkbox"))
+    listenCheckbox(checkboxElement);
 
 for (let inputElement of document.querySelectorAll("input.control-value-size")) {
     inputElement.addEventListener('keypress', (event) => {
@@ -30,5 +23,15 @@ for (let element of document.querySelectorAll('.add-task-btn')) {
         tasks.push(task);
         task.createElement(document.getElementById('tasks'), true);
         inputElement.value = '';
+    });
+}
+
+const listenCheckbox = (checkboxElement) => {
+    checkboxElement.addEventListener('click', () => {
+        for (let task of tasks)
+            if (task.getId() == checkboxElement.getAttribute('data-id')) {
+                task.toggleState();
+                task.updateElement();
+            }
     });
 }
